@@ -38,11 +38,14 @@ public:
 // OFF DESIGN CALCULATION
 // =====================================
 
-    double T04_OD = T_05 * (1 + ((gama - 1) / 2) * pow(M_f, 2));
+    //double T04_OD = T_05 * (1 + ((gama - 1) / 2) * pow(M_f, 2));
+    double T04_OD = 950;
     double T03_OD = T_02 + ((cpe/cp) * k_H * T04_OD);
     double T05_OD = T04_OD * (1 - k_H);
 
-    double piC_OD = pow((T03_OD / T_02), ((e_c * gama)/(gama - 1)));
+    //double piC_OD = pow((T03_OD / T_02), (e_c * (gama/(gama - 1))));
+    double piC_OD = 4.9;
+    double z_OD = T04_OD/T_02;
     double P03_OD = piC_OD * P_02;
     double P04_OD = P03_OD;
     double P05_OD = P04_OD * pow((T05_OD / T04_OD), (gamma_e / (e_t * (gamma_e - 1))));

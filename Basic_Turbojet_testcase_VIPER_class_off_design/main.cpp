@@ -22,7 +22,7 @@ int main() {
     //std::cout << "T_02 = " << Inlet().T_02 << std::endl;
     //std::cout << "P_02 = " << Inlet().P_02 << std::endl;
     //std::cout << "T_03 = " << Compressor().T_03 << std::endl;
-    //std::cout << "Off-design: T_03 = " << Nozzle().T03_OD << std::endl;
+    std::cout << "Off-design: T_03 = " << Nozzle().T03_OD << std::endl;
     //std::cout << "P_03 = " << Compressor().P_03 << std::endl;
     //std::cout << "Off-design: P_03 = " << Nozzle().P03_OD << std::endl;
     std::cout << "T_04 = " << Turbine().T_04 << std::endl;
@@ -47,15 +47,21 @@ int main() {
     std::cout << "Critical pressure ratio - TURBINE = " << Turbine().Pcrit << std::endl;
     std::cout << "Turbine pressure ratio = " << Turbine().x << std::endl;
     std::cout << "Off-design: Turbine pressure ratio = " << Nozzle().x_OD << std::endl;
+    std::cout << "Off-design: Compressor pressure ratio = " << Nozzle().piC_OD << std::endl;
+    std::cout << "Off-design: T_04/T_02 = " << Nozzle().z_OD << std::endl;
     std::cout << "Nozzle pressure ratio = " << Nozzle().y << std::endl;
     std::cout << "Off-design: Nozzle pressure ratio = " << Nozzle().y_OD << std::endl;
-    std::cout << "Flight speed = " << Inlet().V_f << std::endl;
+    //std::cout << "Flight speed = " << Inlet().V_f << std::endl;
     std::cout << "Thrust (F_T) = " << Nozzle().Ft << std::endl;
     std::cout << "Specific thrust (F_S) = " << Nozzle().Fs << std::endl;
     std::cout << "SFC = " << Nozzle().sfc << std::endl;
+    std::cout << "========================================================== " << std::endl;
     std::cout << "Off-design: Thrust (F_T) = " << Nozzle().Ft_OD << std::endl;
     std::cout << "Off-design: Specific thrust (F_S) = " << Nozzle().Fs_OD << std::endl;
     std::cout << "Off-design: SFC = " << Nozzle().sfc_OD << std::endl;
+    std::cout << "========================================================== " << std::endl;
+    std::cout << "Off-design: Intake mass flow = " << Nozzle().mdot_a_OD << std::endl;
+    std::cout << "Off-design: Fuel mass flow = " << Nozzle().mdot_f_OD << std::endl;
     std::cout << "Off-design: Total mass flow = " << Nozzle().mdot_tot_OD << std::endl;
 
     Turbine obj;

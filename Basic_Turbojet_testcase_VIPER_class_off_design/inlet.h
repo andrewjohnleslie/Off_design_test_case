@@ -22,13 +22,13 @@ protected:
 // Public inheritance: Public member variables in the base class become protected in the derived class; therefore, not
 //                      accessible.
 public:
-// Ambient conditions - TROPOSPHERE
-    double h = 3000;
+// Ambient conditions - TROPOSPHERE (up to 11KM)
+    double h = 11000;
     double T = 15 - (0.0065 * h);
     double T_a = T + 273.15;
     double P_a = 101325 * (pow( (1 - (0.0065 * (h/288.15))), 5.2561));
 
-    double M_f = 0.78;
+    double M_f = 0.3;
     double a = pow((gama * R * T_a), 0.5);
     double V_f = a * M_f;
 

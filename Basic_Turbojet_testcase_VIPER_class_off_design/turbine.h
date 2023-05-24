@@ -12,8 +12,9 @@
 class Turbine : public Compressor {
 
 private:
+
     void myCustomFunction() {
-        if (choke_t >= 1.832){
+       /* if (choke_t >= 1.832){
             std::cout << std::endl;
             std::cout << "Turbine is choked!" << std::endl;
         }else{
@@ -22,6 +23,7 @@ private:
 
             // double m_norm_ge = pow(gamma_e, (gamma_e - 1)) * pow(2*(pow(P_a/P_05, 2/gamma_e) - pow(P_a/P_05, (gamma_e + 1)/gamma_e)) , 0.5);     pg 77, 177
         }
+        */
     }
 
 public:
